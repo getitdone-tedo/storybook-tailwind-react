@@ -1,9 +1,9 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import TInput from './TInput';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-    title: 'Tailwind/TInput',
+    title: 'Styled/TInput',
     component: TInput,
     // argTypes: {
     //     size: {control: 'text'}

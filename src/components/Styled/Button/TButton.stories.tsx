@@ -1,9 +1,9 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import TButton from './TButton';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-title: 'Tailwind/TButton',
+title: 'Styled/TButton',
 component: TButton,
 argTypes: {
     backgroundColor: { control: 'color' },

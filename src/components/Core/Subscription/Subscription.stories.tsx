@@ -4,7 +4,7 @@ import { Primary } from '../Button/Button.stories';
 import { Large } from '../Input/Input.stories';
 
 export default {
-    title: 'Form/Subscription'
+    title: 'Core/Subscription'
 }
 
 export const PrimarySubscription = () => (

@@ -1,9 +1,9 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import Button from './Button';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-    title: 'Form/Button',
+    title: 'Core/Button',
     component: Button,
     argTypes: {
         onClick: { action: 'clicked...' },
