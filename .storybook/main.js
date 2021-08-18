@@ -10,7 +10,8 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app",
     "@storybook/addon-a11y",
-    "@pxblue/storybook-rtl-addon/register"
+    "@pxblue/storybook-rtl-addon/register",
+    "storybook-addon-pseudo-states"
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({

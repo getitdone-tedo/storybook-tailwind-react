@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import React from 'react';
+import './TButton.css';
 
 const buttonClasses = (variant: any) => 
     classNames({ 
         'text-white border border-white': !variant || variant === 'primary',
         'text-black border border-gray': variant === 'secondary',
-        'cursor-pointer box-border rounded border-solid p-2': true
+        'cursor-pointer box-border rounded border-solid': true
     });
 
 const buttonSizes = (size: any) => 
