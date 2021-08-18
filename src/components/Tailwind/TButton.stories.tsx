@@ -14,44 +14,56 @@ argTypes: {
 const Template: ComponentStory<typeof TButton> = (args) => <TButton {...args} />;
 
 export const Primary = Template.bind({});
-
 Primary.args = {
-variant: 'primary',
-label: "Primary Button",
-backgroundColor: "bg-red-600 hover:bg-indigo-700"
+    variant: 'primary',
+    label: "Primary",
+    size: "medium",
+    backgroundColor: "#F36F21"
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
     variant: 'secondary',
-    label: "Secondary Button"
-}
-
-export const Danger = Template.bind({});
-Danger.args = {
-    variant: 'danger',
-    label: "Danger Button"
+    label: "Secondary",
+    size: "large",
+    backgroundColor: "white"
 }
 
 export const Small = Template.bind({});
 Small.args = {
     variant: 'primary',
-    label: "Small Button",
-    size: "px-4 py-4",
-    backgroundColor: "bg-red-600 hover:bg-indigo-700"
+    label: "Small",
+    size: "small",
+    backgroundColor: "#F36F21"
 }
 
 export const Medium = Template.bind({});
 Medium.args = {
     variant: 'primary',
-    label: "Medium Button",
-    size: "px-8 py-8",
-    backgroundColor: "bg-red-600 hover:bg-indigo-700"
+    label: "Medium",
+    size: "medium",
+    backgroundColor: "#F36F21"
 }
 export const Large = Template.bind({});
 Large.args = {
     variant: 'primary',
-    label: "Large Button",
-    size: "px-16 py-16",
-    backgroundColor: "bg-red-600 hover:bg-indigo-700"
+    label: "Large",
+    size: "large",
+    backgroundColor: "#F36F21"
+}
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    variant: 'primary',
+    label: "Disabled",
+    size: "medium",
+    backgroundColor: "#949496"
+}
+
+export const Pressed = Template.bind({});
+Pressed.args = {
+    variant: 'primary',
+    label: "Pressed",
+    size: "medium",
+    backgroundColor: "#BE4915"
 }

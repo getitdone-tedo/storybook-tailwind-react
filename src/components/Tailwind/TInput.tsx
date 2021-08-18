@@ -9,7 +9,14 @@ const logoClasses = (size: string) =>
     'w-16 bg-red-500': size === 'md',
     'w-12 bg-red-500': size === 'sm'
   })
-
+	// <input
+  //   type="text"
+  //   id="userName"
+  //   name="userName"
+  //   data-testid="userName"
+  //   placeholder=" "
+  //   className=" text-baseColor6 px-3 input block w-full appearance-none focus:outline-none bg-transparent"
+  // />
 function TInput(props: any) {
     // const { size = 'Small', ...rest } = props;
     const { size } = props;
