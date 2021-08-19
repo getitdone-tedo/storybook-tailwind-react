@@ -3,35 +3,72 @@ import React from 'react';
 import Button from './Button';
 
 export default {
-    title: 'Core/Button',
-    component: Button,
-    argTypes: {
-        onClick: { action: 'clicked...' },
-    },
+title: 'Components/UI Elements/Button',
+component: Button,
+argTypes: {
+    backgroundColor: { control: 'color' },
+},
 } as ComponentMeta<typeof Button>;
 
-export const Primary = () => <Button variant='primary'>Primary</Button>
-export const Secondary = () => <Button variant='secondary'>Secondary</Button>
-export const Success = () => <Button variant='success'>Success</Button>
-export const Danger = () => <Button variant='danger'>Danger</Button>
-
-// const Template = (args: any) => <Button {...args} />
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const PrimaryA = Template.bind({})
-PrimaryA.args = {
-    variant: 'primary',
-    children: 'Primary Args'
+export const Primary = Template.bind({});
+Primary.args = {
+    label: "OHYEA",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+    variant: 'secondary',
+    label: "Secondary",
+    size: "large",
+    backgroundColor: "white"
 }
 
-export const LongPrimaryA = Template.bind({})
-LongPrimaryA.args = {
+export const Small = Template.bind({});
+Small.args = {
     variant: 'primary',
-    children: 'Long Primary Args'
+    label: "Small",
+    size: "small",
+    backgroundColor: "#F36F21"
 }
-export const SecondaryA = Template.bind({})
-SecondaryA.args = {
-    variant: 'secondary',
-    children: 'Secondary Args'
+
+export const Medium = Template.bind({});
+Medium.args = {
+    variant: 'primary',
+    label: "Medium",
+    size: "medium",
+    backgroundColor: "#F36F21"
 }
+export const Large = Template.bind({});
+Large.args = {
+    variant: 'primary',
+    label: "Large",
+    size: "large",
+    backgroundColor: "#F36F21"
+}
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    variant: 'primary',
+    label: "Disabled",
+    size: "medium",
+    backgroundColor: "#949496"
+}
+
+export const Pressed = Template.bind({});
+Pressed.args = {
+    variant: 'primary',
+    label: "Pressed",
+    size: "medium",
+    backgroundColor: "#BE4915"
+}
+
+export const Global3: ComponentStory<typeof Button> = (args, { globals: { locale } }) => 
+<Button {...{ ...{
+    variant: 'primary',
+    size: "medium",
+    backgroundColor: "#0c36f3"
+}, label: locale }} />;
+

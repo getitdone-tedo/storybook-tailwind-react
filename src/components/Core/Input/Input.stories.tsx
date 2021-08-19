@@ -1,11 +1,28 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 import Input from './Input';
 
 export default {
-    title: 'Core/Input',
-    component: Input
+    title: 'Components/UI Elements/Input',
+    component: Input,
+    // argTypes: {
+    //     size: {control: 'text'}
+    // }
+} as ComponentMeta<typeof Input>;
+
+
+const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+
+export const Default = Template.bind({})
+Default.args = {
+    mandatory: false,
+    label: 'Username',
+    // placeHolder: 'Username'
 }
 
-export const Small = () => <Input size='small' placeholder="Small size" />
-export const Medium = () => <Input size='medium' placeholder="Medium size" />
-export const Large = () => <Input size='large' placeholder="Large size" />
+export const Mandatory = Template.bind({})
+Mandatory.args = {
+    mandatory: true,
+    label: 'Username',
+    // placeHolder: 'Username'    
+}

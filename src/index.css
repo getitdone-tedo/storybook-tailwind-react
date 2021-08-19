@@ -20,14 +20,14 @@
     --warning-color: #FF0000;
     --accent-color-1: #EB104A;
     }
-   }
+  }
+
+  input:focus-within ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply transform; @apply scale-75; @apply -translate-y-3;
+  }
    
-   input:focus-within ~ label,
-   input:not(:placeholder-shown) ~ label {
-     @apply transform; @apply scale-75; @apply -translate-y-3;
-   }
-   
-   input:focus-within ~ label {
-     @apply text-gray-400;
-   }
-   
+  input:focus-within ~ label {
+    @apply text-baseColor6;
+  }
+  
