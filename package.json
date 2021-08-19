@@ -72,5 +72,8 @@
     "postcss-loader": "^6.1.1",
     "storybook-addon-pseudo-states": "^1.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "resolutions": {
+    "babel-loader":"8.1.0"
   }
 }

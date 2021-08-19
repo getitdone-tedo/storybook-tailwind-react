@@ -1,20 +1,5 @@
-import classNames from 'classnames';
 import React from 'react';
 import './TButton.css';
-
-const buttonClasses = (variant: any) => 
-    classNames({ 
-        'text-white border border-white': !variant || variant === 'primary',
-        'text-black border border-gray': variant === 'secondary',
-        'cursor-pointer box-border rounded border-solid text-base': true
-    });
-
-const buttonSizes = (size: any) => 
-    classNames({
-        'w-24 h-6': !size || size === 'small',
-        'w-28 h-8': size === 'medium',
-        'w-28 h-10': size === 'large',
-    });
 
 
 interface ButtonProps {
@@ -51,9 +36,8 @@ const TButton = ({
 }: ButtonProps) => {
     return (
         <button 
-            className={[buttonClasses(variant), buttonSizes(size)].join(' ')} 
+            className="bg-primaryColor1"
             {...props} 
-            style={{ backgroundColor }}
         >
             {label}
         </button>
