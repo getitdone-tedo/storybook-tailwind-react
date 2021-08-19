@@ -7,6 +7,10 @@ title: 'Styled/TButton',
 component: TButton,
 argTypes: {
     backgroundColor: { control: 'color' },
+    propertyA: {
+    options: ['Item One', 'Item Two', 'Item Three'],
+    control: { type: 'select' } // Automatically inferred when 'options' is defined
+    }
 },
 } as ComponentMeta<typeof TButton>;
 
@@ -67,3 +71,10 @@ Pressed.args = {
     size: "medium",
     backgroundColor: "#BE4915"
 }
+
+export const Global3: ComponentStory<typeof TButton> = (args, { globals: { locale } }) => 
+<TButton {...{ ...{
+    variant: 'primary',
+    size: "medium",
+    backgroundColor: "#0c36f3"
+}, label: locale }} />;
