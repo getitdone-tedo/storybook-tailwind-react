@@ -6,7 +6,7 @@ const buttonClasses = (variant: any) =>
     classNames({ 
         'text-white border border-white': !variant || variant === 'primary',
         'text-black border border-gray': variant === 'secondary',
-        'cursor-pointer box-border rounded border-solid': true
+        'cursor-pointer box-border rounded border-solid text-base': true
     });
 
 const buttonSizes = (size: any) => 
@@ -59,6 +59,7 @@ const TButton = ({
         </button>
     );
 };
+
 
 
 export default TButton

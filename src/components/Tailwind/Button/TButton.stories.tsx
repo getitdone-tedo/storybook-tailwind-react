@@ -1,12 +1,17 @@
 import React from 'react';
 import TButton from './TButton';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { useGlobals } from '@storybook/api';
 
 export default {
 title: 'Tailwind/TButton',
 component: TButton,
 argTypes: {
     backgroundColor: { control: 'color' },
+    propertyA: {
+    options: ['Item One', 'Item Two', 'Item Three'],
+    control: { type: 'select' } // Automatically inferred when 'options' is defined
+    }
 },
 } as ComponentMeta<typeof TButton>;
 
@@ -67,3 +72,10 @@ Pressed.args = {
     size: "medium",
     backgroundColor: "#BE4915"
 }
+
+export const Global3: ComponentStory<typeof TButton> = (args, { globals: { locale } }) => 
+<TButton {...{ ...{
+    variant: 'primary',
+    size: "medium",
+    backgroundColor: "#0c36f3"
+}, label: locale }} />;
