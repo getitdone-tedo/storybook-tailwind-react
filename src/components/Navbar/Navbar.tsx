@@ -7,7 +7,7 @@ import React from 'react'
 export const Navbar = (props: any) => {
     return (
         <nav className="grid lg:grid-cols-12 grid-cols-4 gap-4 bg-white
-lg:h-[104px] h-[500px] px-4 shadow-navbarShadow flex justify-center items-center" {...props}>
+lg:h-[104px] h-[50px] px-4 shadow-navbarShadow flex justify-center items-center" {...props}>
     
     </nav>
     );
