@@ -25,6 +25,20 @@ module.exports = {
 			bgGradient3: 'var(--background-gradient-3)',
 		},
 	},
+	screen: {
+		'3xl': '1920',
+		// => @media (min-width: 1920px) { ... }
+	},
+	boxShadow: {
+		navbarShadow: '0px 1px 6px rgba(0, 0, 0, 0.2)',
+		menuShadow: 'inset 0px -1px 0px #3F8BBF',
+		avatarShadow: '0px 0px 6px 3px rgba(0, 0, 0, 0.1)',
+		languageMenuShadow:
+			'0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05)',
+	},
+	dropShadow: {
+		menuDropShadow: '0px 1px 6px rgba(0, 0, 0, 0.2)',
+	},
   },
   variants: {
     extend: {

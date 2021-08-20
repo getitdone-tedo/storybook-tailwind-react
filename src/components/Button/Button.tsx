@@ -1,16 +1,17 @@
 import classNames from 'classnames';
 import React, { SyntheticEvent } from 'react';
+import { Icon } from '../Icon/Icon';
 
 interface ButtonProps {
-    color: 'primary'|'secondary'|'tertiary'|'disabled';
-    text: string;
-    label: string;
-    buttonSize?: 'small'|'medium'|'large';
+    color: 'primary'|'secondary'|'tertiary'|'disabled',
+    text: string,
+    label: string,
+    buttonSize?: 'small'|'medium'|'large',
 
     hasIcon?: boolean,
     iconName?: string,
     iconSize?: 'small'|'medium'|'large',
-    iconColor?: 'primary'|'secondary'|'tertiary'|'body'|'white',
+    iconColor?: 'primary'|'secondary'|'tertiary'|'disabled',
 
     disabled?: boolean,
     pressed?: boolean,
@@ -67,10 +68,9 @@ export const Button = ({
             {/* {
                 hasIcon && (
                     <Icon 
-                    className={''} 
                     iconName={iconName} 
                     size={iconSize}
-                    color={iconColor} />
+                    color={color} />
                 )
             } */}
             {text}

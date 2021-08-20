@@ -2,13 +2,13 @@ import classNames from 'classnames';
 import React from 'react';
 import './Input.css';
 
-const logoClasses = (size: string) =>
-  classNames({
-    'w-96 bg-red-500': !size || size === 'xl',
-    'w-48 bg-red-500': size === 'lg',
-    'w-16 bg-red-500': size === 'md',
-    'w-12 bg-red-500': size === 'sm'
-  })
+// const logoClasses = (size: string) =>
+//   classNames({
+//     'w-96 bg-red-500': !size || size === 'xl',
+//     'w-48 bg-red-500': size === 'lg',
+//     'w-16 bg-red-500': size === 'md',
+//     'w-12 bg-red-500': size === 'sm'
+//   })
 
   interface InputProps {
     /**
