@@ -1,64 +1,79 @@
-import React from 'react';
 import classNames from 'classnames';
-
-const buttonClasses = (variant: any) => 
-    classNames({ 
-        'text-white border border-white': !variant || variant === 'primary',
-        'text-black border border-gray': variant === 'secondary',
-        'cursor-pointer box-border rounded border-solid text-base': true
-    });
-
-const buttonSizes = (size: any) => 
-    classNames({
-        'w-24 h-6': !size || size === 'small',
-        'w-28 h-8': size === 'medium',
-        'w-28 h-10': size === 'large',
-    });
+import React, { SyntheticEvent } from 'react';
 
 interface ButtonProps {
-    /**
-     * variant
-     */
-    variant?: 'primary' | 'secondary';
-    /**
-     * What background color to use
-     */
-    backgroundColor?: string;
-    /**
-     * How large should the button be?
-     */
-    size?: 'small' | 'medium' | 'large';
-    // size?: string;
-    /**
-     * Button contents
-     */
+    color: 'primary'|'secondary'|'tertiary'|'disabled';
+    text: string;
     label: string;
-    /**
-     * Optional click handler
-     */
-    onClick?: () => void;
+    buttonSize?: 'small'|'medium'|'large';
+
+    hasIcon?: boolean,
+    iconName?: string,
+    iconSize?: 'small'|'medium'|'large',
+    iconColor?: 'primary'|'secondary'|'tertiary'|'body'|'white',
+
+    disabled?: boolean,
+    pressed?: boolean,
+    tabIndex?: number,
+    
+    onClick?: (e: SyntheticEvent<HTMLButtonElement>) => void,
+    onKeydown?: (e: SyntheticEvent<HTMLButtonElement>) => void,
 }  
 
+const buttonClasses = (color: string) => 
+    classNames({ 
+        'bg-primaryColor1 hover:bg-primaryColor2': !color || color === 'primary',
+        'bg-secondaryColor1 hover:bg-secondaryColor2': color === 'secondary',
+        'bg-tertiaryColor1 hover:bg-tertiaryColor2': color === 'tertiary',
+        'bg-baseColor6 hover:bg-baseColor4': color === 'disabled',
+        'cursor-pointer text-white text-base rounded border border-white focus:border-double focus:border-4 focus:border-white': true
+    }); 
 
-const Button = ({
-    variant = 'primary',    
-    size = 'medium',
-    backgroundColor,
-    label,
-  ...props
+const buttonSizes = (size: string) => 
+    classNames({
+        'w-28 h-8': !size || size === 'small',
+        'w-32 h-10': size === 'medium',
+        'w-36 h-12': size === 'large',
+    });
+
+
+export const Button = ({
+    color = 'primary',   
+    text = "Button",
+    label = "Button",
+    buttonSize = 'medium',
+    hasIcon = false,
+    iconName = "Icon",
+    iconSize = "small",
+    iconColor = "primary",
+    disabled = false,
+    pressed = false,
+    tabIndex = 0,
+    onClick, 
+    onKeydown,
+    ...props
 }: ButtonProps) => {
     return (
         <button 
-        className={[buttonClasses(variant), buttonSizes(size)].join(' ')}  
-        // className="bg-primaryColor1"
-            {...props} 
-            style={{ backgroundColor }}
+        className={[buttonClasses(color), buttonSizes(buttonSize)].join(' ')}  
+        disabled={disabled ? disabled : false} 
+        aria-pressed={pressed}
+        aria-label={label}
+        tabIndex={tabIndex}
+        onClick={onClick}
+        onKeyDown={onKeydown}
+        {...props} 
         >
-            {label}
+            {/* {
+                hasIcon && (
+                    <Icon 
+                    className={''} 
+                    iconName={iconName} 
+                    size={iconSize}
+                    color={iconColor} />
+                )
+            } */}
+            {text}
         </button>
     );
 };
-
-
-
-export default Button

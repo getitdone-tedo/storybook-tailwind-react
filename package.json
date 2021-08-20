@@ -21,6 +21,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "build:style": "tailwind build src/index.css -o src/tailwind.css",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -74,6 +75,6 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "resolutions": {
-    "babel-loader":"8.1.0"
+    "babel-loader": "8.1.0"
   }
 }
