@@ -26,7 +26,7 @@ const buttonClasses = (color: string) =>
         'bg-primaryColor1 hover:bg-primaryColor2': !color || color === 'primary',
         'bg-secondaryColor1 hover:bg-secondaryColor2': color === 'secondary',
         'bg-tertiaryColor1 hover:bg-tertiaryColor2': color === 'tertiary',
-        'bg-baseColor6 hover:bg-baseColor4': color === 'disabled',
+        'bg-baseColor6': color === 'disabled',
         'cursor-pointer text-white text-base rounded border border-white focus:border-double focus:border-4 focus:border-white': true
     }); 
 

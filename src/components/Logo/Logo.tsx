@@ -1,25 +1,23 @@
 import React from 'react'
 
 interface LogoProps {
-    className?: string,
     src?: string,
     alt?: string,
     href?: string,
 }
 
-function Logo({
-    className = `lg:h-[86px] h-8 w-auto`,
+const logoClass = `lg:h-[86px] h-8 w-auto`;
+
+export const Logo = ({
     src = "E2E_LOGO.png",
     alt = "E2E Group Logo",
     href = "/"
-}:LogoProps) {
+}:LogoProps) => {
     return (
     <div className="">
         <a href={href} >
-            <img className={className} src={src} alt={alt} />
+            <img className={logoClass} src={src} alt={alt} />
         </a>
     </div>
     )
 }
-
-export default Logo

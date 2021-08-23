@@ -21,7 +21,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "watch": "npx tailwindcss -o src/tailwind.css --watch",
+    "watch": "npx tailwindcss -i ./src/index.css -o ./src/tailwind.css --watch",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
