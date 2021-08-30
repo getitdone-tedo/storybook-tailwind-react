@@ -1,16 +1,33 @@
 import { Navbar } from './Navbar'
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Logo } from '../Logo/Logo';
-import { Logo_Default } from '../Logo/Logo.stories';
+import LanguageMenu from '../LanguageMenu/LanguageMenu';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 export default {
     title: 'Components/UI Elements/Navbar',
     component: Navbar,
 } as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
+const menuData = [
+    "English",
+    "French",
+    "Españolé",
+    "Deutsche"
+]
 
-export const Empty_Navbar = Template.bind({});
-Empty_Navbar.args = {
-    children: Logo_Default
-};
+const menuData2 = [
+    {menuTitle: "Menu one", href: "#"},
+    {menuTitle: "Menu two", href: "#"},
+    {menuTitle: "Menu three", href: "#"},
+    {menuTitle: "Menu four", href: "#"},
+]
+
+export const WithLanguageMenu = () =>
+<Navbar>
+    <LanguageMenu menuData={menuData}/>
+</Navbar>;
+
+export const WithHamburgerMenu = () =>
+<Navbar>
+    <HamburgerMenu menuData={menuData2}/>
+</Navbar>;

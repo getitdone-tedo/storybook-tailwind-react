@@ -10,8 +10,8 @@ export default {
     
     const Template: ComponentStory<typeof HamburgerMenu> = (args) => <HamburgerMenu {...args} />;
     
-    export const MenuAvatar = Template.bind({});
-    MenuAvatar.args = {
+    export const HamburgerMenuDefault = Template.bind({});
+    HamburgerMenuDefault.args = {
         menuData: [
             {menuTitle: "Menu one", href: "#"},
             {menuTitle: "Menu two", href: "#"},

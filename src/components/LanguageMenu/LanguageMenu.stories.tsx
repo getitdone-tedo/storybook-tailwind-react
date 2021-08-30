@@ -13,9 +13,9 @@ export default {
     export const MenuAvatar = Template.bind({});
     MenuAvatar.args = {
         menuData: [
-            {menuTitle: "English", href: "#"},
-            {menuTitle: "French", href: "#"},
-            {menuTitle: "Españolé", href: "#"},
-            {menuTitle: "Deutsche", href: "#"},
+            "English",
+            "French",
+            "Españolé",
+            "Deutsche"
         ]
     };
