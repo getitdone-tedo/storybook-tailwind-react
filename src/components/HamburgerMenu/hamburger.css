@@ -1,0 +1,21 @@
+.b {
+    display: flex;  
+    background: #000;
+  }
+  .box {
+    background: lightblue;
+    margin-left: auto;
+  }
+  
+  #fade-in {
+    height: 150px;
+    width: 1px;
+    opacity: 0;
+    transition: all .75s ease;
+  }
+  
+  #fade-in.show {
+    opacity: 1;
+    height: 150px;
+    width: 500px;
+  }

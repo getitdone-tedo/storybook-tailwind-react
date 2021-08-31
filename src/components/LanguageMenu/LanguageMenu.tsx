@@ -39,9 +39,9 @@ function LanguageMenu({
 			) : (
 				<DownArrowIcon className="w-[10px] h-[6px]" />
 			)}
-            
+
             {toggleLanguageMenu && (
-                <div data-testid="languageMenu-menu" className="absolute top-[calc(140%)] right-[calc(0%) end-[calc(0%)] bg-secondaryColor1 border border-[#3f8bbf] lg:w-[240px] w-[162px] drop-shadow-languageMenuShadow">
+                <div data-testid="languageMenu-menu" className="absolute top-[calc(140%)] right-[calc(0%)] end-[calc(0%)] bg-secondaryColor1 border border-[#3f8bbf] lg:w-[240px] w-[162px] drop-shadow-languageMenuShadow">
                     {menuData.map(menu => (
                         <MenuItem menuItem={menu} />
                     ))}

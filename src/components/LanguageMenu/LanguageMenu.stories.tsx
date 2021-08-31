@@ -5,6 +5,9 @@ import LanguageMenu from './LanguageMenu';
 export default {
     title: 'Components/UI Elements/LanguageMenu',
     component: LanguageMenu,
+    parameters:{
+        layout:'centered',
+      },
     } as ComponentMeta<typeof LanguageMenu>;
     
     

@@ -5,6 +5,9 @@ import React from 'react'
 export default {
     title: 'Components/UI Elements/HamburgerMenu',
     component: HamburgerMenu,
+    parameters:{
+        layout:'centered',
+      },
     } as ComponentMeta<typeof HamburgerMenu>;
     
     

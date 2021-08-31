@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, SyntheticEvent } from 'react'
 
 export const MenuItem: FC<{menuItem:string}> = ({menuItem}) => {
 
