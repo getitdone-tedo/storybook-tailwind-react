@@ -1,0 +1,10 @@
+#fade-in {
+    width: 1px;
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+}
+
+#fade-in.show {
+    opacity: 1;
+    transition: all 0.75s ease-in-out;
+}
